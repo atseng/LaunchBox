@@ -1,3 +1,5 @@
+#yoyoyo cool g raps
+
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
@@ -25,7 +27,11 @@ gem 'jquery-rails'
 group :tests, :development do
   gem 'rspec-rails'
   gem 'capybara'
-  gem 'factory_girl_rails'
+  gem 'launchy'
+end
+
+group :tests do
+	gem 'factory_girl_rails'
 end
 
 # To use ActiveModel has_secure_password
