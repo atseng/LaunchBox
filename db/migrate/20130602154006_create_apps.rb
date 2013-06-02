@@ -4,7 +4,8 @@ class CreateApps < ActiveRecord::Migration
       t.string :name
       t.string :url
       t.string :email
-      t.stringdescription :codebase_url
+      t.string :codebase_url
+      t.text :description
       t.integer :props
 
       t.timestamps
