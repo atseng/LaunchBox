@@ -38,5 +38,16 @@ describe "Apps" do
   	end
   end
 
+  describe "viewing an app" do
+  	it "will open a new page that has additional app information" do
+  		visit '/apps/new'
+  		valid_submit
+  		click_button "Create App"
+  		click_link "Back"
+  		click_link "Show"
+  		expect(page).to have_content('CuddleWithUs')
+  	end
+  end
+
 
 end

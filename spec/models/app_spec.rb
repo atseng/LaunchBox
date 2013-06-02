@@ -36,4 +36,13 @@ describe App do
 		end
   end
 
+  describe "viewing an app" do
+		it "will display more information about the app on a new page" do
+			app = FactoryGirl.create(:app)
+			expect(App.all.count).to eq(1)
+		end
+
+
+	end
+
 end
