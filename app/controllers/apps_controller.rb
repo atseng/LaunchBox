@@ -15,7 +15,6 @@ class AppsController < ApplicationController
   def show
     @app = App.find(params[:id])
     @comment = Comment.new
-    puts "HEY !!!!! The params are #{params.inspect}"
 
     respond_to do |format|
       format.html # show.html.erb

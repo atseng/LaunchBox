@@ -17,13 +17,13 @@
     <td><%= comment.first_name %></td>
     <td><%= comment.last_name %></td>
     <td><%= comment.email %></td>
-    <td><%= link_to 'Show', comment %></td>
-    <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-    <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', app_comment_path(@app, comment) %></td>
+    <td><%= link_to 'Edit', edit_app_comment_path(@app, comment) %></td>
+    <td><%= link_to 'Destroy', [@app, comment], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Comment', new_comment_path %>
+<%= link_to 'New Comment', new_app_comment_path(@app) %>
