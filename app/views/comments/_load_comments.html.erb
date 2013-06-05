@@ -1,16 +1,3 @@
-<h1>Listing comments</h1>
-
-<table>
-  <tr>
-    <th>Text</th>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Email</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @comments.each do |comment| %>
   <tr>
     <td><%= comment.text %></td>
@@ -22,8 +9,3 @@
     <td><%= link_to 'Destroy', [@app, comment], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Comment', new_app_comment_path(@app) %>

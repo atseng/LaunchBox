@@ -33,6 +33,21 @@
     </div>
   </div>
 
+<table>
+  <% @app.comments.each do |comment| %>
+    <tr>
+      <td><%= comment.text %></td>
+      <td><%= comment.first_name %></td>
+      <td><%= comment.last_name %></td>
+      <td><%= comment.email %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p>
+  <%= render 'comments/form' %>
+</p>
+
 
       <div class="span4">
         <div class="btn-toolbar">
