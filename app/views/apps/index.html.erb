@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 <div class= "container">
     <div class= "row">
-        <div class="span12">
+        <div class="span8">
             <h1>LaunchBox</h1>
+        </div>
+        <div class="span4">
+            <%= button_to 'Submit your app', new_app_path, class: "btn btn-primary btn-large", method: :get %>
         </div>
     </div>
 
@@ -13,14 +16,8 @@
     </div>
 
     <div class="row">
-        <div class="offset11 span1 pull-right btn" >
-            <%= link_to 'New App', new_app_path %>
-        </div>
-    </div>
-
-    <div class="row">
         <div class="span12">
-            <table class= "table">
+            <table>
               <tr>
                 <th>Name</th>
                 <th>Url</th>
@@ -47,7 +44,7 @@
             </table>
         </div>
     </div>
-    <br />  
+    <br />
 </div>
 
 
