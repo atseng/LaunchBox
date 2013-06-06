@@ -53,10 +53,10 @@
         <div class="btn-toolbar">
           <div class="btn-group pull-right">
             <div class="btn">
-              Give Props!
+              <%= link_to 'Give Props!', new_app_prop_path(@app, @prop) %>
             </div>
             <div class="btn">
-              <%= @app.props %>
+              <%= @app.props.count %>
             </div>
           </div>
         </div>
