@@ -2877,3 +2877,12 @@ input[type="submit"].btn.btn-mini {
 .icon-fullscreen {
   background-position: -456px -144px;
 }
+
+.span4 .btn.btn-large.btn-primary {
+  float: right;
+}
+
+.row .span4 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+}

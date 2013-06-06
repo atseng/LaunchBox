@@ -17,3 +17,8 @@
 		border-radius: 12px;
 	}
 
+.table th, .table td {
+  max-width: 500px;
+  word-wrap: break-word;
+}
+
