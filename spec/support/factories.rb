@@ -9,4 +9,11 @@ FactoryGirl.define do
     codebase_url "www.github.com/cuddlewithus"
     props 0
   end
+
+  factory :comment do
+  	first_name "One Eyed"
+  	last_name "Jack"
+  	email "jackme@up"
+  	text "I see all of the world when my eye spins round'"
+  end
 end

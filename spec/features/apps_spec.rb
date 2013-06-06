@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "Apps" do
 
-	let(:app_submit){FactoryGirl.build(:app)}
+	let(:app_submit){FactoryGirl.create(:app)}
 	let(:valid_submit) do
 		fill_in("Name", :with => app_submit.name)
 		fill_in("Url", :with => app_submit.url)
@@ -10,6 +10,9 @@ describe "Apps" do
 		fill_in("Codebase url", :with => app_submit.codebase_url)
 		fill_in("Props", :with => app_submit.props)
 	end
+
+  after(:each) {App.delete_all}
+  before(:each) {App.delete_all}
 
   describe "viewing the index" do
   	it "should display a list of submitted apps" do
@@ -40,11 +43,9 @@ describe "Apps" do
 
   describe "viewing an app" do
   	it "will open a new page that has additional app information" do
-  		visit '/apps/new'
-  		valid_submit
-  		click_button "Create App"
-  		click_link "Back"
-  		click_link "Show"
+  		app_submit
+      visit '/apps'
+      click_link "Show"
   		expect(page).to have_content('CuddleWithUs')
   	end
   end
@@ -64,16 +65,15 @@ describe "Apps" do
 
   describe 'viewing the app page' do
   it 'should have a comment form to enter first name, last name, email, text' do
-    visit '/apps/new'
-    fill_in('Name', :with => 'My App')
-    fill_in('Url', :with => 'www.myapp.com')
-    fill_in('Email', :with => 'my@app.com')
-    fill_in('Codebase url', :with => 'guthub.com/myapp')
-    fill_in('Props', :with => '1')
-    click_button('Create App')
+    app_submit
     visit '/apps'
     click_link('Show')
-    expect(page).to have_content("New comment")
+    expect(page).to have_css("textarea#comment_text")
   end
- end
+
+  it 'non-existant app will redirect to app index' do
+    visit '/apps/88'
+    expect(page).to have_content("App Not Found") 
+    end
+  end
 end
