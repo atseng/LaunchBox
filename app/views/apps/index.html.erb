@@ -16,35 +16,43 @@
     </div>
 
     <div class="row">
-        <div class="span12">
-            <table>
-              <tr>
-                <th>Name</th>
-                <th>Url</th>
-                <th>Email</th>
-                <th>Codebase url</th>
-                <th>Props</th>
-                <th></th>
-                <th></th>
-                <th></th>
-              </tr>
-
-            <% @apps.each do |app| %>
-              <tr>
-                <td><%= app.name %></td>
-                <td><%= app.url %></td>
-                <td><%= app.email %></td>
-                <td><%= app.codebase_url %></td>
-                <td><%= app.props %></td>
-                <td><%= link_to 'Show', app %></td>
-                <td><%= link_to 'Edit', edit_app_path(app) %></td>
-                <td><%= link_to 'Destroy', app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              </tr>
-            <% end %>
-            </table>
+        <div class="offset11 span1 pull-right btn" >
+            <%= link_to 'New App', new_app_path %>
         </div>
     </div>
-    <br />
 </div>
+ <div class="container2">
+        <div class="row">      
+            <div class="span12">
+                <table class= "table">
+                  <tr>
+                    <th>Name</th>
+                    <th>Url</th>
+                    <th>Email</th>
+                    <th>Codebase url</th>
+                    <th>Props</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  </tr> 
+                <% @apps.each do |app| %>
+                  <tr>
+                    <td><%= app.name %></td>
+                    <td><%= app.url %></td>
+                    <td><%= app.email %></td>
+                    <td><%= app.codebase_url %></td>
+                    <td><%= app.props %></td>
+                    <td><%= link_to 'Show', app %></td>
+                    <td><%= link_to 'Edit', edit_app_path(app) %></td>
+                    <td><%= link_to 'Destroy', app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+                <% end %>
+                </table>
+            </div>
+        </div>
+    </div> 
+    <br />  
+
+
 
 
