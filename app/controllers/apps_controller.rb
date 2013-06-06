@@ -17,10 +17,13 @@ class AppsController < ApplicationController
     @comment = Comment.new
 
     respond_to do |format|
-      format.html # show.html.erb
+      # format.html # show.html.erb
+      format.html
       format.json { render json: @app }
     end
-  end
+   rescue ActiveRecord::RecordNotFound
+      redirect_to apps_path, notice: "App Not Found"
+   end
 
   # GET /apps/new
   # GET /apps/new.json
