@@ -2,8 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 	body {
-		overflow-y: hidden ! important;
-    overflow-x: hidden ! important;
 	}
 
 	.span8 h1 {
@@ -17,23 +15,29 @@
 	}
 
 	.container2 {
+		min-height: 100%;
+		padding-bottom: 50px;
+		margin: 0 auto -30px;
 		background:url('/assets/kindajean.png');
 		background-repeat: repeat;
-		height: 600px;
-		-webkit-background-size:contain;
-		-moz-background-size:contain;
-		background-size:contain;
+		overflow-y: hidden ! important;
+    overflow-x: hidden ! important;
+		// -webkit-background-size:contain;
+		// -moz-background-size:contain;
+		// background-size:contain;
 		margin-top: 40px;
 	}
 
 	.span12 .table {
 		margin-top: 3%;
 		margin-left: 17.5%;
+		padding-bottom: 20px;
 	}
 
 	.table table {
 		margin-left: auto;
 		margin-right: auto;
+		margin-bottom:40px;
 	}
 
 .table th, .table td {
@@ -53,6 +57,7 @@
 }
 
 .footer {
+	clear: both;
 	width:100%;
 	position: fixed;
 	bottom: 0;
