@@ -1,24 +1,69 @@
 // Place all the styles related to the Apps controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-	.span12 h1 {
-		line-height: 90px;
-		font-size: 75px;
+	body {
+		overflow-y: hidden ! important;
+    overflow-x: hidden ! important;
+	}
+
+	.span8 h1 {
+		line-height: 70px;
+		font-size: 65px;
+	}
+
+	.span4 .btn {
+		margin-top: 20px;
+		margin-bottom: 10px;
 	}
 
 	.container2 {
-		background-image:url('/assets/kindajean.png');
-		height:600px;
+		background:url('/assets/kindajean.png');
+		background-repeat: repeat;
+		height: 600px;
+		-webkit-background-size:contain;
+		-moz-background-size:contain;
+		background-size:contain;
+		margin-top: 40px;
 	}
 
 	.span12 .table {
-		margin-top:1.5%;
-		margin-left: 18%;
-		border-radius: 12px;
+		margin-top: 3%;
+		margin-left: 17.5%;
+	}
+
+	.table table {
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 .table th, .table td {
   max-width: 500px;
   word-wrap: break-word;
+  font-family: sans-serif;
 }
 
+.table tr:first-child {
+	background-color: #00BEFF;
+	color: white;
+	border-radius: 10px;
+}
+
+.table tr {
+	background-color: white;
+}
+
+.footer {
+	width:100%;
+	position: fixed;
+	bottom: 0;
+	background:#2C2C2C;
+	height:30px;
+}
+
+.footer p {
+	padding: 5px;
+	text-align:center;
+	color:#767676;
+	font-family: sans-serif;
+	font-style: bold;
+}
