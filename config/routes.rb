@@ -1,7 +1,7 @@
 Launchbox::Application.routes.draw do
 
   # resources :apps
-  resources :comments
+  #resources :comments
   resources :apps do
     resources :comments
     resources :props
