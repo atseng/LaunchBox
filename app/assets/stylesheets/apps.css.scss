@@ -72,3 +72,21 @@
 	font-family: sans-serif;
 	font-style: bold;
 }
+
+.app-submit-form {
+  padding: 30px;
+  background: #00BEFF;
+  border-radius: 10px;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.app-submit-form label {
+  font-family: inherit;
+  font-size: 1.7em;
+  color: #F0F0F0;
+}
+
+.app-submit-form .actions {
+  margin: 0;
+}
