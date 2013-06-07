@@ -1,71 +1,64 @@
 <div class= "container">
-    <div class= "row">
-        <div class="span12">
-            <h1>LaunchBox</h1>
-        </div>
+  <div class= "row">
+    <div class="span12">
+      <h1>LaunchBox</h1>
     </div>
+  </div>
 
   <div class= "row">
-        <div class="span12">
-            <h3> <%= @app.name %> </h3>
-        </div>
+    <div class="span12">
+      <h3> <%= @app.name %> </h3>
     </div>
+  </div>
 
-    <div class="row">
-      <div class="span11">
-        <p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="span12">
+      <p id="notice"><%= notice %></p>
 
-        <p>
-          <b>Url:</b>
-          <%= @app.url %>
-        </p>
+      <p>
+        <b>Url:</b>
+        <%= @app.url %>
+      </p>
 
-        <p>
-          <b>Email:</b>
-          <%= @app.email %>
-        </p>
+      <p>
+        <b>Email:</b>
+        <%= @app.email %>
+      </p>
 
-        <p>
-          <b>Codebase url:</b>
-          <%= @app.codebase_url %>
-        </p>
+      <p>
+        <b>Codebase url:</b>
+        <%= @app.codebase_url %>
+      </p>
 
-        <p>
-          <b>Props:</b>
-          <%= @app.props %>
-        </p>
-   <!--    </div>
-
-      <div class="row"> -->
-
-<table class="table table-striped">
-  <% @app.comments.each do |comment| %>
-    <tr>
-      <td><%= comment.text %></td>
-      <td><%= comment.first_name %></td>
-      <td><%= comment.last_name %></td>
-      <td><%= comment.email %></td>
-    </tr>
-  <% end %>
-</table>
-
-<p>
-  <%= render 'comments/form' %>
-</p>
-</div>
-
-      <div class="span4">
-        <div class="btn-toolbar">
-          <div class="btn-group pull-right">
-            <div class="btn">
-              Give Props!
-            </div>
-          </div>
-        </div>
-      </div>
+      <p>
+        <b>Props:</b>
+        <%= @app.props %>
+      </p>
     </div>
+ </div>
 
+  <div class="row">
+      <table class="table table-striped">
+        <% @app.comments.each do |comment| %>
+          <tr>
+            <td><%= comment.text %></td>
+            <td><%= comment.first_name %></td>
+            <td><%= comment.last_name %></td>
+            <td><%= comment.email %></td>
+          </tr>
+        <% end %>
+      </table>
+  </div>
 
-        <%= link_to 'Edit', edit_app_path(@app) %> |
-        <%= link_to 'Back', apps_path %>
+  <p><%= render 'comments/form' %></p>
+
+  <div class="span12">
+    <div class="btn">Give Props!</div>
+  </div>
+
+  <p>
+  <%= link_to 'Edit', edit_app_path(@app) %> |
+  <%= link_to 'Back', apps_path %>
+  </p>
+
 </div>
