@@ -1,5 +1,5 @@
 Launchbox::Application.routes.draw do
-
+  root :to => "apps#index"
   # resources :apps
   #resources :comments
   resources :apps do

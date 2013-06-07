@@ -41,8 +41,9 @@ class PropsController < ApplicationController
   # POST /props
   # POST /props.json
   def create
-    @prop = Prop.new(params[:prop])
     @app = App.find(params[:app_id])
+    @prop = @app.props.new(params[:prop])
+
     respond_to do |format|
       if @prop.save
         format.html { redirect_to app_path(@app), notice: 'Prop was successfully created.' }
@@ -57,7 +58,7 @@ class PropsController < ApplicationController
   # PUT /props/1
   # PUT /props/1.json
   def update
-    @prop = Prop.find(params[:id])
+    @prop = @app.props.find(params[:id])
 
     respond_to do |format|
       if @prop.update_attributes(params[:prop])
@@ -80,5 +81,11 @@ class PropsController < ApplicationController
       format.html { redirect_to props_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def load_app
+    @app = App.find(params[:app_id])
   end
 end
