@@ -5,34 +5,46 @@
         </div>
     </div>
 
-  <div class= "row">
-        <div class="span12">
-            <h3> <%= @app.name %> </h3>
-        </div>
-    </div>
-
     <div class="row">
         <div class="span12">
             <img src="http://placehold.it/960x425">
         </div>
     </div>
 
-    <div class="row">
-      <div class="span4">
-        <p id="notice"><%= notice %></p>
-        <p>
-          <!-- <b>Url:</b> -->
-          <%= @app.url %>
-        </p>
+  <div class= "row">
+        <div class="span12">
+            <h3> <%= @app.name %> </h3>
+        </div>
+    </div>
+
+  <div class="row">
+    <div class="span6">
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <b>Url:</b>
+        <%= @app.url %>
+      </p>
+
+      <p>
+        <b>Email:</b>
+        <%= @app.email %>
+      </p>
+
+      <p>
+        <b>Codebase url:</b>
+        <%= @app.codebase_url %>
+      </p>
+
       </div>
-      <div class="span4">
-        <div class="btn pull-right">
+      <div class="span6">
+        <div class="btn">
             GitHub
         </div>
-      </div>
-      <div class="span4">
-        <%= render 'props/form' %>
-        <div class="btn">
+        <div class='pull-right'>
+           <%= render 'props/form' %>
+        </div>
+        <div class="btn pull-right">
           <%= @app.props.count %>
         </div>
       </div>
