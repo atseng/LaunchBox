@@ -5,7 +5,7 @@
             <h1>LaunchBox</h1>
         </div>
         <div class="span4">
-            <%= button_to 'Submit your app', new_app_path, class: "btn btn-primary btn-large", method: :get %>
+            <%= button_to 'Submit your app', new_app_path, class: "btn btn-info btn-large", method: :get %>
         </div>
     </div>
 
@@ -15,14 +15,9 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="offset11 span1 pull-right btn" >
-            <%= link_to 'New App', new_app_path %>
-        </div>
-    </div>
 </div>
  <div class="container2">
-        <div class="row">      
+        <div class="row">
             <div class="span12">
                 <table class= "table">
                   <tr>
@@ -34,7 +29,7 @@
                     <th></th>
                     <th></th>
                     <th></th>
-                  </tr> 
+                  </tr>
                 <% @apps.each do |app| %>
                   <tr>
                     <td><%= app.name %></td>
@@ -50,8 +45,8 @@
                 </table>
             </div>
         </div>
-    </div> 
-    <br />  
+    </div>
+    <br />
 
 
 
