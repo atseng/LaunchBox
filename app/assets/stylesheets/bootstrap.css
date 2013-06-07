@@ -2878,11 +2878,29 @@ input[type="submit"].btn.btn-mini {
   background-position: -456px -144px;
 }
 
-.span4 .btn.btn-large.btn-primary {
+.span4 .btn.btn-large.btn-info {
   float: right;
 }
 
 .row .span4 {
   margin-top: 10px;
   margin-bottom: 6px;
+}
+
+.app-submit-form {
+  padding: 30px;
+  background: #00BEFF;
+  border-radius: 10px;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.app-submit-form label {
+  font-family: inherit;
+  font-size: 1.7em;
+  color: #F0F0F0;
+}
+
+.app-submit-form .actions {
+  margin: 0;
 }

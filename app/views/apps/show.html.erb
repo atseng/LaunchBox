@@ -12,26 +12,31 @@
     </div>
 
     <div class="row">
-        <div class="span12">
-            <img src="http://placehold.it/960x425">
-        </div>
-    </div>
-
-    <div class="row">
-      <div class="span4">
+      <div class="span11">
         <p id="notice"><%= notice %></p>
 
         <p>
-          <!-- <b>Url:</b> -->
+          <b>Url:</b>
           <%= @app.url %>
         </p>
-      </div>
 
-  <div class="span4">
-    <div class="btn pull-right">
-        GitHub
-    </div>
-  </div>
+        <p>
+          <b>Email:</b>
+          <%= @app.email %>
+        </p>
+
+        <p>
+          <b>Codebase url:</b>
+          <%= @app.codebase_url %>
+        </p>
+
+        <p>
+          <b>Props:</b>
+          <%= @app.props %>
+        </p>
+   <!--    </div>
+
+      <div class="row"> -->
 
 <table class="table table-striped">
   <% @app.comments.each do |comment| %>
@@ -47,7 +52,7 @@
 <p>
   <%= render 'comments/form' %>
 </p>
-
+</div>
 
       <div class="span4">
         <div class="btn-toolbar">
@@ -55,31 +60,10 @@
             <div class="btn">
               Give Props!
             </div>
-            <div class="btn">
-              <%= @app.props %>
-            </div>
           </div>
         </div>
       </div>
     </div>
-
-        <p>
-          <b>Email:</b>
-          <%= @app.email %>
-        </p>
-
-     <% if false %>
-        <p>
-          <b>Codebase url:</b>
-          <%= @app.codebase_url %>
-        </p>
-
-        <p>
-            <b>Props:</b>
-          <%= @app.props %>
-        </p>
-    <% end %>
-
 
 
         <%= link_to 'Edit', edit_app_path(@app) %> |
