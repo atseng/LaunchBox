@@ -3,7 +3,9 @@ Launchbox::Application.routes.draw do
   resources :comments
   resources :apps do
     resources :comments
+    resources :props
   end
+
 
 
   # The priority is based upon order of creation:

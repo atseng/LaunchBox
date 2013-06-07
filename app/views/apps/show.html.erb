@@ -20,65 +20,41 @@
     <div class="row">
       <div class="span4">
         <p id="notice"><%= notice %></p>
-
         <p>
           <!-- <b>Url:</b> -->
           <%= @app.url %>
         </p>
       </div>
-
-  <div class="span4">
-    <div class="btn pull-right">
-        GitHub
-    </div>
-  </div>
-
-<table class="table table-striped">
-  <% @app.comments.each do |comment| %>
-    <tr>
-      <td><%= comment.text %></td>
-      <td><%= comment.first_name %></td>
-      <td><%= comment.last_name %></td>
-      <td><%= comment.email %></td>
-    </tr>
-  <% end %>
-</table>
-
-<p>
-  <%= render 'comments/form' %>
-</p>
-
-
       <div class="span4">
-        <div class="btn-toolbar">
-          <div class="btn-group pull-right">
-            <div class="btn">
-              Give Props!
-            </div>
-            <div class="btn">
-              <%= @app.props %>
-            </div>
-          </div>
+        <div class="btn pull-right">
+            GitHub
+        </div>
+      </div>
+      <div class="span4">
+        <%= render 'props/form' %>
+        <div class="btn">
+          <%= @app.props.count %>
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class"offset3 span6">
+        <table class="table table-striped">
+          <% @app.comments.each do |comment| %>
+            <tr>
+              <td><%= comment.text %></td>
+              <td><%= comment.first_name %></td>
+              <td><%= comment.last_name %></td>
+              <td><%= comment.email %></td>
+            </tr>
+          <% end %>
+        </table>
 
         <p>
-          <b>Email:</b>
-          <%= @app.email %>
+          <%= render 'comments/form' %>
         </p>
-
-     <% if false %>
-        <p>
-          <b>Codebase url:</b>
-          <%= @app.codebase_url %>
-        </p>
-
-        <p>
-            <b>Props:</b>
-          <%= @app.props %>
-        </p>
-    <% end %>
+      </div>
+    </div>
 
 
 
