@@ -15,7 +15,7 @@ class AppsController < ApplicationController
   def show
     @app = App.find(params[:id])
     @comment = Comment.new
-
+    @prop = Prop.new
     respond_to do |format|
       # format.html # show.html.erb
       format.html
@@ -23,7 +23,7 @@ class AppsController < ApplicationController
     end
    rescue ActiveRecord::RecordNotFound
       redirect_to apps_path, notice: "App Not Found"
-   end
+  end
 
   # GET /apps/new
   # GET /apps/new.json
@@ -44,7 +44,7 @@ class AppsController < ApplicationController
   # POST /apps
   # POST /apps.json
   def create
-    @app = App.new(params[:app])
+    @app = App.new(params[:id])
 
     respond_to do |format|
       if @app.save

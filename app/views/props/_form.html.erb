@@ -1,0 +1,20 @@
+<%= form_for([@app, @prop]) do |f| %>
+  <% if @prop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prop.errors.count, "error") %> prohibited this prop from being saved:</h2>
+
+      <ul>
+      <% @prop.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :app_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
