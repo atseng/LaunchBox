@@ -6,6 +6,7 @@ gem 'rails', '3.2.13'
 gem 'less-rails-bootstrap'
 gem 'therubyracer'
 
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -30,6 +31,7 @@ group :tests, :development do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
+  gem 'pry-rails'
 end
 
 group :tests do

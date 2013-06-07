@@ -45,7 +45,7 @@ class AppsController < ApplicationController
   # POST /apps
   # POST /apps.json
   def create
-    @app = App.new(params[:id])
+    @app = App.new(params[:app])
 
     respond_to do |format|
       if @app.save
