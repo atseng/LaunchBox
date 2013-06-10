@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130606203601) do
+ActiveRecord::Schema.define(:version => 20130610203142) do
 
   create_table "apps", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20130606203601) do
     t.string   "email"
     t.string   "codebase_url"
     t.text     "description"
+    t.integer  "props"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
@@ -34,9 +35,9 @@ ActiveRecord::Schema.define(:version => 20130606203601) do
   end
 
   create_table "props", :force => true do |t|
-    t.integer  "app_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "app_id"
   end
 
 end
