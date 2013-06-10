@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(:version => 20130610203142) do
     t.string   "email"
     t.string   "codebase_url"
     t.text     "description"
-    t.integer  "props"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
