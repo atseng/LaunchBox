@@ -90,3 +90,40 @@
 .app-submit-form .actions {
   margin: 0;
 }
+
+.comment-submit-form {
+  padding: 30px;
+  background: #00BEFF;
+  border-radius: 10px;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.comment-submit-form label {
+  font-family: inherit;
+  font-size: 1.4em;
+  color: #F0F0F0;
+}
+.commenter{
+  font-weight: bold;
+  font-style:italic;
+  font-size: 1.1em;
+}
+.comment-text{
+  font-size: 1.1em;
+}
+.pad-top{
+  padding-top:14px;
+}
+.my-label{
+  background-color: #3a87ad;
+  font-size:16px;
+  line-height:20px;
+  color:#fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 2px 4px;
+  vertical-align: baseline;
+}

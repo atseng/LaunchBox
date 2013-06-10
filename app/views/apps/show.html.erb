@@ -1,75 +1,78 @@
 <div class= "container">
-    <div class= "row">
-        <div class="span12">
-            <h1>LaunchBox</h1>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="span12">
-            <img src="http://placehold.it/960x425">
-        </div>
-    </div>
-
   <div class= "row">
-        <div class="span12">
-            <h3> <%= @app.name %> </h3>
-        </div>
+     <p id="notice"><%= notice %></p>
+      <div class="span8">
+          <h1>LaunchBox</h1>
+      </div>
+      <div class="span4">&nbsp;</div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <img src="/assets/launchbox.jpg">
     </div>
-
+  </div>
+  <div class= "row">
+    <div class="span12">
+      <h3> <%= @app.name %> </h3>
+    </div>
+  </div>
   <div class="row">
     <div class="span6">
-      <p id="notice"><%= notice %></p>
-
       <p>
-        <b>Url:</b>
-        <%= @app.url %>
+        <b>URL: </b><%= @app.url %>
       </p>
-
       <p>
-        <b>Email:</b>
-        <%= @app.email %>
+        <b>Email: </b><%= @app.email %>
       </p>
-
       <p>
-        <b>Codebase url:</b>
-        <%= @app.codebase_url %>
+        <b>Codebase URL: </b><%= @app.codebase_url %>
       </p>
-
-      </div>
-      <div class="span6">
-        <div class="btn">
-            GitHub
-        </div>
-        <div class='pull-right'>
-           <%= render 'props/form' %>
-        </div>
-        <div class="btn pull-right">
-          <%= @app.props.count %>
-        </div>
+      <p>
+        <b>Description: </b><%= @app.description %>
+      </p>
+    </div>
+    <div class="span3">
+    </div>
+    <div class="span2">
+      <div class="pull-right"><%= render 'props/form' %></div>
+    </div>
+    <div class="span1 pad-top">
+      <div class="my-label">
+        <%= @app.props.count %>
       </div>
     </div>
-    <div class="row">
-      <div class"offset3 span6">
-        <table class="table table-striped">
-          <% @app.comments.each do |comment| %>
-            <tr>
-              <td><%= comment.text %></td>
-              <td><%= comment.first_name %></td>
-              <td><%= comment.last_name %></td>
-              <td><%= comment.email %></td>
-            </tr>
-          <% end %>
-        </table>
+  </div>
+        <br />
+        <h4>Comments</h4>
+        <hr />
+        <% @app.comments.each do |comment| %>
+        <div class="row comments-section">
+          <div class="offset1 span2">
+            <span class="commenter"><%= comment.first_name %> <%= comment.last_name %> said:<span>
+          </div>
+          <div class="span8">
+           <span class="comment-text"><%= comment.text %></span>
+         </div>
+       </div>
+       <div class="row">
+        <div class="offset1 span10">
+          <hr />
+        </div>
+       </div>
+      <% end %>
 
-        <p>
-          <%= render 'comments/form' %>
-        </p>
-      </div>
+  <div class="row">
+    <div class="offset2 span6">
+      <%= render 'comments/form' %>
     </div>
+  </div>
 
-
-
-        <%= link_to 'Edit', edit_app_path(@app) %> |
-        <%= link_to 'Back', apps_path %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset6 span4">
+      <%= link_to 'Edit', edit_app_path(@app) %> |
+      <%= link_to 'Back', apps_path %>
+    </div>
+  </div>
 </div>
